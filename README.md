@@ -1,1 +1,3 @@
-# geekbrains-java-generics
+Java Generics
+-
+Конспект вебинара по дженерикам
