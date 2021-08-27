@@ -22,6 +22,10 @@ class Zoo<T> {
         return null;
     }
 
+    // не работает для статических методов
+    //    public static T release(T animal) {} // error!
+
+    // но можно делать так
     public static <A> Zoo<A> create() {
         return new Zoo<A>();
     }
