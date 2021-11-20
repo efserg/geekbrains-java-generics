@@ -28,14 +28,14 @@ public class App03 {
         // Если бы дженерики были инвариантны, то была бы возможна, например, такая запись:
 //        List<Animal> animals = new ArrayList<Leon>(); // ошибка времени компиляции (инвариантность)
         // Но это работает с массивами
-        Animal[] a = new Leon[5]; // ковариантность
+        Animal[] a = new Lion[5]; // ковариантность
 
         // Мешает ли нам инвариантность дженериков? Рассмотрим пример - метод,
         // который принимает на вход коллекцию с животными и кормит их
         final App03 app03 = new App03();
         final List<Animal> animals = Arrays.asList(
                 new Snake("Каа", 5),
-                new Leon("Симба", 3),
+                new Lion("Симба", 3),
                 new Elephant("Джимбо", 30)
         ); // эта коллекция параметризована общим предком всех животных - классом Animal
         app03.feedAnimals(animals);
@@ -51,7 +51,7 @@ public class App03 {
         // напомню код с зоопарком
         final Zoo<Animal> animalZoo = new Zoo<>();
         animalZoo.encage(new Elephant("Джимбо", 50));
-        animalZoo.encage(new Leon("Симба", 1));
+        animalZoo.encage(new Lion("Симба", 1));
         animalZoo.encage(new Snake("Каа", 1));
 
         // Параметризовывать можно не только классом, но и интерфейсом

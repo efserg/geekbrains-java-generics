@@ -35,7 +35,7 @@ public class App02 {
         // -- слон
         // Всех их можно поместить в наш зоопарк, т.е. в данном случае полиморфизм работает
         animalZoo.encage(new Elephant("Джимбо", 50));
-        animalZoo.encage(new Leon("Симба", 1));
+        animalZoo.encage(new Lion("Симба", 1));
         animalZoo.encage(new Snake("Каа", 1));
 
         // Если мы попробуем припарковать в серпентариум слона, то это у нас не получится

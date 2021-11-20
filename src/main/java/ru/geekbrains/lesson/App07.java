@@ -18,14 +18,14 @@ public class App07 {
         // что делать в таких случаях?
         // переписать метод...
         app07.feedAnimals(snakes); // теперь все работает
-// ? называется wildcard
+                                   // ? называется wildcard
         // можно создать класс, параметризованный только wildcard
         final Zoo<?> zoo = new Zoo<>();
         // равносильно созданию без параметризации, но безопаснее
 //        zoo.encage(new Leon("Mufasa", 10)); // не работает
         // работает, но не безопасно, т.к. можно положить любой объект
         final Zoo zoo1 = new Zoo();
-        zoo1.encage(new Leon("Mufasa", 10));
+        zoo1.encage(new Lion("Mufasa", 10));
 
         // можно и сразу создать класс, параметризованный с wildcard
         final Zoo<? extends Animal> extendsZoo = new Zoo<>();

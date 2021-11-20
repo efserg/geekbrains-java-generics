@@ -11,7 +11,7 @@ public class App08 {
     //     public static <T> void copy(List<? super T> dest, List<? extends T> src) {
     // src - источник (Producer) - выдает данные
     // dest - потребитель (Consumer) - потребляет данные
-    // Есть общий принцип, который можно запомнить с помошью мнемонического правила "PECS"
+    // Есть общий принцип, который можно запомнить с помощью мнемонического правила "PECS"
     // PE - Producer Extends (src)
     // CS - Consumer Super (dest)
 
@@ -25,7 +25,7 @@ public class App08 {
         // Попробуем скопировать из одного списка животных в другой
         List<Animal> src = Arrays.asList(
                 new Elephant("Джимбо", 50),
-                new Leon("Симба", 1),
+                new Lion("Симба", 1),
                 new Snake("Каа", 1)
         );
         List<Animal> dst = Arrays.asList(null, null, null); // контракт метода
@@ -34,7 +34,7 @@ public class App08 {
         dst.forEach(Animal::feed);
 
         // Теперь предположим, мы хотим вызвать наш метод для таких коллекций
-        List<Leon> leons = Arrays.asList(new Leon("Simba", 2), new Leon("Mufasa", 5));
+        List<Lion> lions = Arrays.asList(new Lion("Simba", 2), new Lion("Mufasa", 5));
         List<Snake> snakes = Arrays.asList(null, null);
 
 //        Collections.copy(snakes, leons); // ошибка! Нельзя скопировать львов в змей
@@ -45,12 +45,12 @@ public class App08 {
         // Но это будет работать, для всех классов, которые лежат выше (либо равны)
         // по иерархии наследования, чем Leon
         // Что логично
-        List<Leon> leonsDest = Arrays.asList(null, null);
+        List<Lion> leonsDest = Arrays.asList(null, null);
         List<Animal> animalDest = Arrays.asList(null, null);
         List<Object> objDest = Arrays.asList(null, null);
-        Collections.copy(leonsDest, leons);
-        Collections.copy(animalDest, leons);
-        Collections.copy(objDest, leons);
+        Collections.copy(leonsDest, lions);
+        Collections.copy(animalDest, lions);
+        Collections.copy(objDest, lions);
     }
 
 }

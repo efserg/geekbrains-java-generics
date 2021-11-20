@@ -16,11 +16,11 @@ public class App04 {
         Zoo<Elephant> elephantZoo = Zoo.create(); // вместо <A> будет подставлен Elephant
 
         // рассмотрим еще один пример:
-        final boolean isSimbaEncage = Zoo.encage(Zoo.create(), new Leon("Simba", 1));
+        final boolean isSimbaEncage = Zoo.encage(Zoo.create(), new Lion("Simba", 1));
 
         // не всегда работает правильно (компилятор не всегда может понять тип) -
         // нужно указывать явно
-        final Leon simba = Zoo.<Leon>create().release(new Leon("Simba", 1));
+        final Lion simba = Zoo.<Lion>create().release(new Lion("Simba", 1));
 
     }
     // И еще раз как создать параметризованный метод
