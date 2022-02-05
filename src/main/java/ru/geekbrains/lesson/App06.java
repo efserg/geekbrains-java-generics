@@ -22,5 +22,5 @@ class FZoo<A, T extends Animal & Movable> extends AnimalZoo<T> {
 
 }
 
-// 4) если родительский класс непараметризован
+// 4) если родительский класс не параметризован
 // class A<A, B> extends B {}
